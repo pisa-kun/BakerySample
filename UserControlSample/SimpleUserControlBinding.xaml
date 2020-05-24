@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="UserControlSample.SimpleUserControlBinding"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserControlSample"
+             mc:Ignorable="d"
+             x:Name="parent">
+    <!--StackPanel以下の要素が全てBinding対象-->
+    <StackPanel DataContext="{Binding ElementName=parent}"  Orientation="Horizontal">
+        <Rectangle Width="50" Fill="{Binding Path=Foreground}" />
+        <TextBlock Text="：" />
+        <TextBox Text="{Binding Path=DataContext}" />
+        <TextBlock Background="Blue" Text="Sample" />
+    </StackPanel>
+</UserControl>

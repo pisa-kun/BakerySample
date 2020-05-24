@@ -1,0 +1,70 @@
+パン屋サンプル
+概要説明
+24 May 2020
+Tags: golang, present
+
+author:
+location:
+address:
+
+@twitter
+
+* ヘッダ
+
+ほんぺ
+
+* 導入方法
+1. まずはgolangをインストールしよう
+
+2. presentのインストール
+> go get golang.org/x/tools/cmd/present
+
+- ユーザー\go\binにpresent.goができる
+- ユーザー\go\binを環境変数に設定しておけば
+> present.go
+でサーバーを起動できる。デフォルトは3999
+
+* .play(or .code) hoge.go で指定したgoコードを表示
+
+- example/hoge.go
+.code example/hoge.go
+
+- code を押下すると結果が表示される(ハズ)
+
+* .code hoge.go で指定したgoコードを表示
+
+- example/sample.go
+.play example/sample.go
+
+- play を押下すると結果が表示される(ハズ)
+
+
+* 画像を挿入する
+- .image で挿入可能
+- .image image/hoge.png 400 500 (サイズ指定可能)
+.image image/mk1.png 300 300
+
+* 画像を挿入する 2 originalSize
+.image image/mk1.png
+
+* .background 指定した画像を背景に表示
+
+.background image/run_gopher.png
+
+* .link URL クリックできるリンクとして表示
+
+.link https://pt.slideshare.net/YutakaKato/present-75952579
+
+* githubへの公開
+
+> http://go-talks.appspot.com/github.com/<owner>/<project>/<xxx.slide>
+
+- スライドデータはここ
+.link https://github.com/pisa-kun/goPresentPractice/blob/master/hoge.slide
+
+- 公開先
+    - ブランチ名とblobが必要ない
+http://go-talks.appspot.com/github.com/pisa-kun/goPresentPractice/hoge.slide
+
+<owner> : pisa-kun
+<project> : goPresentPractice/hoge.slide
